@@ -1,4 +1,9 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
+using TerminalPortal.Application;
+using TerminalPortal.Application.Interfaces;
+using TerminalPortal.Application.Repositoryes;
+using TerminalPortal.Application.Services;
 
 namespace TerminalPortal
 {
@@ -22,9 +27,13 @@ namespace TerminalPortal
             {
                 cfg.AddProfile(new MappingProfile());
             });
-
             var mapper = configuration.CreateMapper();
             services.AddSingleton(mapper);
+            services.AddDbContext<AppDbContext>();
+            services.AddTransient<IToyRepository, ToyRepository>();
+            services.AddTransient<IToyService, ToyService>();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

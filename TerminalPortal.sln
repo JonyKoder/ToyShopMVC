@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalPortal", "TerminalP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalPortal.Domain", "TerminalPortal.Domain\TerminalPortal.Domain.csproj", "{91138DF9-49AB-4EF0-98BB-C55ECA7AA79B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalPortal.Application", "TerminalPortal.Application\TerminalPortal.Application.csproj", "{058FC593-9966-4882-844F-5E37A5B8D9D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{91138DF9-49AB-4EF0-98BB-C55ECA7AA79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91138DF9-49AB-4EF0-98BB-C55ECA7AA79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91138DF9-49AB-4EF0-98BB-C55ECA7AA79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{058FC593-9966-4882-844F-5E37A5B8D9D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{058FC593-9966-4882-844F-5E37A5B8D9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{058FC593-9966-4882-844F-5E37A5B8D9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{058FC593-9966-4882-844F-5E37A5B8D9D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

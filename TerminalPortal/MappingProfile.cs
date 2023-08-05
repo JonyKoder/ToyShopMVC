@@ -9,6 +9,7 @@ namespace TerminalPortal
         public MappingProfile()
         {
             CreateMap<Toy, ToyViewModel>();
+            CreateMap<Cart, CartViewModel>();
         }
     }
 }

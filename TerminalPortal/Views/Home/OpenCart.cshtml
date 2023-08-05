@@ -1,0 +1,27 @@
+﻿@model List<CartViewModel>
+<h1>Корзина</h1>
+<table>
+    <tr>
+        <th>Фото</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Действия</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="centered">
+                @item.Title
+            </td>
+            <td class="centered">
+                @item.Description
+            </td>
+            <td class="centered">
+                @item.Id
+            </td>
+        </tr>
+    }
+
+</table>
