@@ -11,7 +11,7 @@ namespace TerminalPortal.Domain.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public ICollection<Toy> Toys { get; set; }
+        public Toy Toy { get; set; }
         public Guid ToyId { get; set; }
     }
 }

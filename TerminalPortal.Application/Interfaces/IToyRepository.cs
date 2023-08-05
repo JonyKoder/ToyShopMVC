@@ -13,7 +13,7 @@ namespace TerminalPortal.Application.Interfaces
         Task AddToyAsync(Toy toy);
         Task AddProductInCartAsync(Guid toyId,Cart cart);
         Task<List<Toy>> GetListToysAsync();
-        Task UpdateToyAsync(Toy toy);
+        Task UpdateToyAsync(Toy toy);   
         Task<List<Toy>> GetToysByCategory(string categoryName);
         Task DeleteToyAsync(Guid id);
     }

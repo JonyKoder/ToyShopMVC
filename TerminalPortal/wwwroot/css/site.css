@@ -90,3 +90,40 @@ table tbody + tbody {
 table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+.button-link {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .button-link:hover {
+        text-decoration: none;
+    }
+
+.edit {
+    background-color: #4caf50;
+}
+
+    .edit:hover {
+        background-color: #45a049;
+    }
+
+.delete {
+    background-color: #f44336;
+}
+
+    .delete:hover {
+        background-color: #da190b;
+    }
+
+.add-to-cart {
+    background-color: #008cba;
+}
+
+    .add-to-cart:hover {
+        background-color: #00739e;
+    }

@@ -111,6 +111,13 @@ namespace TerminalPortal.Controllers
             await _toyService.Delete(id);
             return NoContent();
         }
+        public async Task<IActionResult> DeleteCart(int id)
+        {
+            var cart = await _context.Carts.FirstOrDefaultAsync(x => x.Id == id);
+            _context.Carts.Remove(cart);
+            _context.SaveChanges();
+            return NoContent();
+        }
         public async Task<IActionResult> AddToyInCart(Guid id)
         {
             
@@ -122,7 +129,7 @@ namespace TerminalPortal.Controllers
                 ToyId = id
             };
             await _toyService.AddToyInCartAsync(id, cart);
-            return NoContent();
+            return RedirectToAction("Index");
         }
         public IActionResult GetImage(string imagePath)
         {
@@ -155,7 +162,7 @@ namespace TerminalPortal.Controllers
         }
         public async Task<IActionResult> OpenCart()
         {
-            var carts = await _context.Carts.ToListAsync();
+            var carts = await _context.Carts.Include(x => x.Toy).ThenInclude(x => x.Category).ToListAsync();
 
             var cartDto = _mapper.Map<List<CartViewModel>>(carts);
             return View(cartDto);
@@ -163,6 +170,7 @@ namespace TerminalPortal.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ToyViewModel toyViewModel)
         {
+            
             if (toyViewModel.ImageFile != null)
             {
 
