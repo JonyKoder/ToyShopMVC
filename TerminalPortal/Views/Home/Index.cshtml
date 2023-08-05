@@ -1,0 +1,50 @@
+﻿@model List<ToyViewModel>
+
+@{
+    ViewData["Title"] = "TerminalPortal";
+}
+
+<div class="text-center">
+    <style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+</style>
+    <table>
+        <tr>
+            <th>№</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Цена</th>
+        </tr>
+      
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Description
+                </td>
+                <td>
+                    @item.Price
+                </td>
+            </tr>
+            }
+        
+    </table>
+</div>
